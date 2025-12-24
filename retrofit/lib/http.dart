@@ -28,7 +28,7 @@ enum Parser {
 
   /// Each model class must add annotation '@MappableClass()'
   /// For more detail, please visit 'https://github.com/schultek/dart_mappable'
-  DartMappable,
+  // DartMappable, //NOTE: Disabled for now
 
   /// Parse on a separate isolate using `compute` (Flutter only).
   ///
@@ -132,10 +132,7 @@ class Method {
   ///
   /// * [method] - The HTTP method (e.g., 'GET', 'POST', 'PUT', etc.)
   /// * [path] - The relative or absolute path for the endpoint
-  const Method(
-    this.method,
-    this.path,
-  );
+  const Method(this.method, this.path);
 
   /// HTTP request method which can be found in [HttpMethod].
   final String method;
